@@ -4,10 +4,10 @@
 // Add class Stack here
 class Stack
 {
-  void validPara(string expression)
+  void validPara(std::string expression)
   {
     //It will determine whether all parenthesis are completed or something is missing.
-     
+
 
     //It will print valid if all are completed otherwise it will print invalid. 
     if(/* the amount of ( and/or [ are equal to the number of ) and/or ] */)
@@ -21,17 +21,17 @@ class Stack
 
     //It will take one string parameter that is an expression.
   }
-  void indexError(string expression)
+  void indexError(std::string expression)
   {
     //It will find out the first index where the actual error occurred which is invalid parentheses.
     // It will take one string parameter that is an expression. 
     // It will return the first index of unbalanced parenthesis. 
-    return expression[0];
+    return expression;
     //Return -1 if all parenthesis are completed.
     if(/* all parenthesis are completed */)
     {
-      string ex = "-1";
-      return ex;
+      std::string ex = "-1";
+      std::cout << ex;
     }
 
   }
