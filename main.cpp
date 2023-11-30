@@ -1,18 +1,68 @@
 #include<iostream>
+#include<string>
 
 // Add class Stack here
 class Stack
 {
-  void validPara();
-  void indexError();
-  void minPara();
-  void scorePara();
+  void validPara(std::string expression)
+  {
+    //It will determine whether all parenthesis are completed or something is missing.
+
+
+    //It will print valid if all are completed otherwise it will print invalid. 
+    if(/* the amount of ( and/or [ are equal to the number of ) and/or ] */)
+    {
+        std::cout << "Valid" << std::endl;
+    }
+    else
+    {
+        std::cout << "Invalid" << std::endl;
+    }
+
+    //It will take one string parameter that is an expression.
+  }
+  void indexError(std::string expression)
+  {
+    //It will find out the first index where the actual error occurred which is invalid parentheses.
+    // It will take one string parameter that is an expression. 
+    // It will return the first index of unbalanced parenthesis. 
+    return expression;
+    //Return -1 if all parenthesis are completed.
+    if(/* all parenthesis are completed */)
+    {
+      std::string ex = "-1";
+      std::cout << ex;
+    }
+
+  }
+  void minPara()
+  {
+    //It will determine how many parenthesis are needed to make a string of code as a valid parenthesis string.
+    // It will take one string parameter that is an expression. 
+    //It will print how many minimum parentheses are required to make the string balanced. 
+  }
+  void scorePara()
+  {
+    //It will calculate how many valid parentheses are present in the given string. 
+    //It will take one string parameter that is an expression. 
+    //It will print how many balanced parentheses are present in the string.
+  }
 };
 // Add class Queue here
 class Queue
 {
-  void enqueue();
-  void processMsg();
+  void enqueue()
+  {
+    //It will divide the entire message into chunks (new string) of 8 characters and insert it into the queue.
+    // Before insertion it will reverse the character of the chunk using the reverse function. 
+    //It will take a string as a parameter. 
+  }
+  void processMsg()
+  {
+    //It will remove the chunk from the queue one by one until the queue is not empty. 
+    //Then it will be reversed and the entire message will be formed. 
+    //Display the entire message in this function. 
+  }
 };
 
 
