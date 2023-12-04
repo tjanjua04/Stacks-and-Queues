@@ -4,65 +4,74 @@
 // Add class Stack here
 class Stack
 {
-  void validPara(std::string expression)
-  {
-    //It will determine whether all parenthesis are completed or something is missing.
-
-
-    //It will print valid if all are completed otherwise it will print invalid. 
-    if(/* the amount of ( and/or [ are equal to the number of ) and/or ] */)
+  public:
+    void validPara(std::string expre)
     {
-        std::cout << "Valid" << std::endl;
-    }
-    else
-    {
-        std::cout << "Invalid" << std::endl;
-    }
+      //It will determine whether all parenthesis are completed or something is missing.
 
-    //It will take one string parameter that is an expression.
-  }
-  void indexError(std::string expression)
-  {
-    //It will find out the first index where the actual error occurred which is invalid parentheses.
-    // It will take one string parameter that is an expression. 
-    // It will return the first index of unbalanced parenthesis. 
-    return expression;
-    //Return -1 if all parenthesis are completed.
-    if(/* all parenthesis are completed */)
-    {
-      std::string ex = "-1";
-      std::cout << ex;
-    }
 
-  }
-  void minPara()
-  {
-    //It will determine how many parenthesis are needed to make a string of code as a valid parenthesis string.
-    // It will take one string parameter that is an expression. 
-    //It will print how many minimum parentheses are required to make the string balanced. 
-  }
-  void scorePara()
-  {
-    //It will calculate how many valid parentheses are present in the given string. 
-    //It will take one string parameter that is an expression. 
-    //It will print how many balanced parentheses are present in the string.
-  }
+      //It will print valid if all are completed otherwise it will print invalid. 
+      if(/* the amount of ( and/or [ are equal to the number of ) and/or ] */)
+      {
+          std::cout << "Valid" << std::endl;
+      }
+      else
+      {
+          std::cout << "Invalid" << std::endl;
+      }
+
+      //It will take one string parameter that is an expression.
+    }
+    void indexError(std::string expre)
+    {
+      //It will find out the first index where the actual error occurred which is invalid parentheses.
+      // It will take one string parameter that is an expression. 
+      // It will return the first index of unbalanced parenthesis. 
+      return std::string expre;
+      //Return -1 if all parenthesis are completed.
+      if(/* all parenthesis are completed */)
+      {
+        std::cout <<  "-1";
+      }
+
+    }
+    void minPara(std::string expre)
+    {
+      //It will determine how many parenthesis are needed to make a string of code as a valid parenthesis string.
+      // It will take one string parameter that is an expression. 
+      //It will print how many minimum parentheses are required to make the string balanced. 
+      if (/* # of ( < # of )*/)
+      {
+        // cout << '('
+      }
+      else if (/* # of ( > # of )*/)
+      {
+        // cout << ')'
+      }
+    }
+    void scorePara(std::string expre)
+    {
+      //It will calculate how many valid parentheses are present in the given string. 
+      //It will take one string parameter that is an expression. 
+      //It will print how many balanced parentheses are present in the string.
+    }
 };
 // Add class Queue here
 class Queue
 {
-  void enqueue()
-  {
-    //It will divide the entire message into chunks (new string) of 8 characters and insert it into the queue.
-    // Before insertion it will reverse the character of the chunk using the reverse function. 
-    //It will take a string as a parameter. 
-  }
-  void processMsg()
-  {
-    //It will remove the chunk from the queue one by one until the queue is not empty. 
-    //Then it will be reversed and the entire message will be formed. 
-    //Display the entire message in this function. 
-  }
+  public:
+    void enqueue(std::string parameter)
+    {
+      // It will divide the entire message into chunks (new string) of 8 characters and insert it into the queue.
+      // Before insertion it will reverse the character of the chunk using the reverse function. 
+      // It will take a string as a parameter. 
+    }
+    void processMsg()
+    {
+      // It will remove the chunk from the queue one by one until the queue is not empty. 
+      // Then it will be reversed and the entire message will be formed. 
+      // Display the entire message in this function. 
+    }
 };
 
 
