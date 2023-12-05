@@ -1,40 +1,82 @@
 #include<iostream>
-#include<string>
+#include <stack>
+#include <string>
 
 // Add class Stack here
 class Stack
 {
-  public:
+public:
+  bool areParenthesesBalanced(const std::string& str) {
+      std::stack<char> stack;
+  
+      for (char ch : str) {
+          if (ch == '(') {
+              stack.push(ch);
+          } else if (ch == ')' && (stack.empty() || stack.top() != '(')) {
+              return false;
+          } else if (ch == ')') {
+              stack.pop();
+          }
+      }
+  
+      return stack.empty();
+  }
+
     void validPara(std::string expre)
     {
       //It will determine whether all parenthesis are completed or something is missing.
+          expre = "(a + b) * (c + d)";
 
+          if (areParenthesesBalanced(expre)) {
+              std::cout << "Balanced" << std::endl;
+          } else {
+              std::cout << "Not Balanced" << std::endl;
+          }
+      
 
       //It will print valid if all are completed otherwise it will print invalid. 
-      if(/* the amount of ( and/or [ are equal to the number of ) and/or ] */)
-      {
-          std::cout << "Valid" << std::endl;
+      // Check if the number of '(' is equal to the number of ')'
+      int openCount = 0;
+      int closeCount = 0;
+
+      for (char ch : expre) {
+          if (ch == '(') {
+              openCount++;
+          } else if (ch == ')') {
+              closeCount++;
+          }
       }
-      else
-      {
+      if (openCount == closeCount) {
+          std::cout << "Valid" << std::endl;
+      } else {
           std::cout << "Invalid" << std::endl;
       }
 
       //It will take one string parameter that is an expression.
     }
-    void indexError(std::string expre)
-    {
-      //It will find out the first index where the actual error occurred which is invalid parentheses.
-      // It will take one string parameter that is an expression. 
-      // It will return the first index of unbalanced parenthesis. 
-      return std::string expre;
-      //Return -1 if all parenthesis are completed.
-      if(/* all parenthesis are completed */)
-      {
-        std::cout <<  "-1";
-      }
+    int indexError(const std::string& expre) {
+    int openCount = 0;
+    int closeCount = 0;
 
+    for (int i = 0; i < expre.size(); ++i) {
+        if (expre[i] == '(') {
+            openCount++;
+        } else if (expre[i] == ')') {
+            closeCount++;
+            if (closeCount > openCount) {
+                // Unbalanced parenthesis found, return the index
+                return i;
+            }
+        }
     }
+    // If all parentheses are completed, return -1
+    if (openCount == closeCount) {
+        return -1;
+    } else {
+        // Unbalanced parenthesis found at the end of the string
+        return expre.size() - 1;
+    }
+}
     void minPara(std::string expre)
     {
       //It will determine how many parenthesis are needed to make a string of code as a valid parenthesis string.
